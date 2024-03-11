@@ -28,6 +28,7 @@ const extractPersona = `Given a text, please provide a list of subjects with max
                         
 const openai = new OpenAI({apiKey : process.env.OPENAI_API_KEY})
 
+//util functions
 
 function parseLanguageString(inputString) {
    try {
@@ -61,6 +62,9 @@ function parseSubjectsString(subjectsString) {
 
    return subjectsObject;
 }
+//util functions end 
+
+
 app.get("/" ,(req,res) =>{
     res.json("Api for languages")
 })
